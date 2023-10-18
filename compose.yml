@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  fastapi-app:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    # environment:- DATABASE_URL=postgresql://user:password@db/career_center
+    volumes:
+      - ./backend:/app
+
+  nextjs-app:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - node_modules:/app/node_modules
+    # environment: - NEXT_PUBLIC_API_URL=http://fastapi-app:8000  next.jsにてリライトが機能しているため不要
+
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=career_center #db作成
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+  node_modules:
