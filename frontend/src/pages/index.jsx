@@ -16,7 +16,7 @@ const Home = () => {
       const response = await axios.post("/api/users/", { username });
       console.log(response.data); // 応答データをコンソールに表示
     } catch (error) {
-      // エラーが発生した場合、コンソールにエラー情報を出力します
+      // エラーが発生した場合、コンソールにエラー情報を出力しますtest
       console.error(error);
     }
   };
