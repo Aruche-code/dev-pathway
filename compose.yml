@@ -8,7 +8,6 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    # environment:- DATABASE_URL=postgresql://user:password@db/career_center
     volumes:
       - ./backend:/app
 
@@ -24,10 +23,8 @@ services:
 
   db:
     image: postgres:13
-    environment:
-      - POSTGRES_DB=career_center #db作成
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
+    env_file:
+      - postgres.env
     volumes:
       - db-data:/var/lib/postgresql/data
 
