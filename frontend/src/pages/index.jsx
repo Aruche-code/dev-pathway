@@ -24,46 +24,24 @@ const Home = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        {/* ユーザー名を入力するためのテキストフィールド */}
-        <input
-          type="text"
+        
+        <input 
+          className=" m-2 p-0.5 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500"
+          type="text" 
           value={username}
-          // テキストフィールドの値が変更されたときにステートを更新
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)} 
         />
-        <button type="submit">Create User</button>
+        
+        <button
+          className="px-2 py-0.5 bg-blue-500 hover:bg-blue-700 text-white rounded-lg self-start"
+          type="submit"
+        >
+          Create User
+        </button>
+        
       </form>
     </div>
   );
 };
 
 export default Home;
-
-
-
-// pages/index.js
-/*
-import React from "react";
-import axios from "axios"; // axiosをインポート。
-
-async function fetchEndpoint(endpoint) {
-  try {
-    const response = await axios.get(`/api${endpoint}`);
-    console.log(response.data);
-  } catch (error) {
-    console.error("Error fetching endpoint:", error);
-  }
-}
-
-const HomePage = () => {
-  return (
-    <div>
-      <button onClick={() => fetchEndpoint("/hello")}>Fetch Hello</button>
-      <button onClick={() => fetchEndpoint("/goodbye")}>Fetch Goodbye</button>
-      <button onClick={() => fetchEndpoint("/greet/John")}>Greet John</button>
-    </div>
-  );
-};
-
-export default HomePage;
-*/
