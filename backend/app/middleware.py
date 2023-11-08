@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 
-origins = ["http://localhost:3000"]
+origins = ["http://nextjs-app:3000"]
 
 
 def setup_cors(app: FastAPI) -> None:
