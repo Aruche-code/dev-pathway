@@ -10,8 +10,6 @@ from .config import DATABASE_URL
 engine = create_engine(DATABASE_URL)
 
 # トランザクションの明示的なコミット/ロールバックを要求するセッション設定。
-# autocommit=False は、トランザクションのライフサイクルをより細かく制御するため。
-# autoflush=False は、クエリ実行前の自動フラッシュを防ぐため、パフォーマンスの最適化に役立つ。
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 

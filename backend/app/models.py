@@ -20,5 +20,9 @@ Base = declarative_base()
 # ユーザーテーブルを作成
 class User(Base):
     __tablename__ = "users"
-    id = Column(Integer, Sequence("user_id_seq"), primary_key=True)
-    username = Column(String(50), unique=True)
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, index=True)
+
+    # id = Column(Integer, Sequence("user_id_seq"), primary_key=True)
+    # username = Column(String(50), unique=True)
