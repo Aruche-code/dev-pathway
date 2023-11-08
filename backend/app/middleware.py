@@ -5,8 +5,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-
-origins = ["http://localhost:3000"]
+# 開発環境での設定
+origins = ["http://localhost:3000"] #ローカルホストのポート3000からのリクエストを許可しています
 
 
 def setup_cors(app: FastAPI) -> None:
