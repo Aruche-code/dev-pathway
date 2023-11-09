@@ -6,5 +6,15 @@
 from pydantic import BaseModel
 
 
-class CreateUserRequest(BaseModel):
+# おためし作成用スキーマ
+class UserCreate(BaseModel):
     username: str
+
+
+# おためし読み込み用スキーマ（レスポンス用）
+class User(BaseModel):
+    id: int
+    username: str
+
+    class Config:
+        from_attributes = True

@@ -5,8 +5,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-# 開発環境での設定
-origins = ["http://localhost:3000"] #ローカルホストのポート3000からのリクエストを許可しています
+
+origins = ["http://nextjs-app:3000"]
+
 
 
 def setup_cors(app: FastAPI) -> None:
