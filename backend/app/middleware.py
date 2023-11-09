@@ -9,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 origins = ["http://nextjs-app:3000"]
 
 
+
 def setup_cors(app: FastAPI) -> None:
     app.add_middleware(
         CORSMiddleware,
