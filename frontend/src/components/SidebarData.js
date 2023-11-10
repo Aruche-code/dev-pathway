@@ -20,12 +20,12 @@ export const SidebarData = [
   {
     title: "未定",
     icon: <AssessmentIcon />,
-    link: "/",
+    link: "/useradd",
   },
   {
     title: "未定",
     icon: <PersonAddIcon />,
-    link: "/",
+    link: "/userdelete",
   },
   {
     title: "未定",
