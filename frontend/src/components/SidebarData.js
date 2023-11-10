@@ -1,45 +1,34 @@
 import HomeIcon from "@mui/icons-material/Home";
-import CreateIcon from "@mui/icons-material/Create";
-import AssessmentIcon from "@mui/icons-material/Assessment";
+import EditCalendarIcon from "@mui/icons-material/EditCalendar";
+//import AssessmentIcon from "@mui/icons-material/Assessment";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import AddCardIcon from "@mui/icons-material/AddCard";
-import BackupIcon from "@mui/icons-material/Backup";
+import CreateIcon from "@mui/icons-material/Create";
 import SettingsIcon from "@mui/icons-material/Settings";
 
 export const SidebarData = [
   {
-    title: "ホーム",
+    title: "初来ページ",
     icon: <HomeIcon />,
     link: "/",
   },
   {
-    title: "ユーザ名作成",
-    icon: <CreateIcon />,
-    link: "/user",
-  },
-  {
-    title: "未定",
-    icon: <AssessmentIcon />,
-    link: "/",
-  },
-  {
-    title: "未定",
+    title: "プロフィール作成",
     icon: <PersonAddIcon />,
-    link: "/",
+    link: "/profile",
   },
   {
-    title: "未定",
-    icon: <AddCardIcon />,
-    link: "/",
-  },
-  {
-    title: "未定",
-    icon: <BackupIcon />,
-    link: "/",
+    title: "予約",
+    icon: <EditCalendarIcon />,
+    link: "/booking",
   },
   {
     title: "設定",
     icon: <SettingsIcon />,
     link: "/",
+  },
+  {
+    title: "動作確認用",
+    icon: <CreateIcon />,
+    link: "/user",
   },
 ];
