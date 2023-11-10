@@ -55,7 +55,7 @@ export default function User() {
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
         className="border p-2 rounded w-full mb-4"
-        placeholder="ユーザ名をここに入力..."
+        placeholder="ユーザ名をここに入力"
         required
       />
       <button
