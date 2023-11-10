@@ -1,17 +1,12 @@
 // frontend/pages/index.js
-// トップレベルのルートページコンポーネント
-import AppBar from "../components/AppBar";
-import Sidebar from "../components/Sidebar";
-import React from "react";
+//トップレベルのrootページコンポーネント
+import Layout from '../components/layouts';
 
 export default function index() {
   return (
-    <div className="flex flex-col h-screen">
-      <AppBar />
-      <div className="flex flex-1 overflow-hidden">
-        <Sidebar />
-        <div className="flex flex-col flex-1 p-4 overflow-auto"></div>
-      </div>
-    </div>
+    <Layout>
+        <h1>共通部分を記述します</h1>
+    </Layout>
   );
 }
+

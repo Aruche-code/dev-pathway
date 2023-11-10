@@ -1,8 +1,6 @@
-import AppBar from "../components/AppBar";
-import Sidebar from "../components/Sidebar";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-//開発動作確認用のトップレベルのページコンポーネント
+import Layout from '../components/layouts';
 
 export default function User() {
   // ユーザー名のテキストを管理するためのステート
@@ -49,44 +47,38 @@ export default function User() {
   };
 
   return (
-    <div className="flex flex-col h-screen">
-      <AppBar />
-      <div className="flex flex-1 overflow-hidden">
-        <Sidebar />
-        <div className="flex flex-col flex-1 p-4 overflow-auto">
-          <div className="flex-1 bg-gray-100 p-4 shadow rounded-lg m-2">
-            <h1 className="text-xl font-bold mb-4">ユーザを作成</h1>
-            <input
-              type="text"
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
-              className="border p-2 rounded w-full mb-4"
-              placeholder="ユーザ名をここに入力..."
-              required
-            />
+    <Layout>
+    <div className="flex-1 bg-gray-100 p-4 shadow rounded-lg m-2">
+      <h1 className="text-xl font-bold mb-4">ユーザを作成</h1>
+      <input
+        type="text"
+        value={userName}
+        onChange={(e) => setUserName(e.target.value)}
+        className="border p-2 rounded w-full mb-4"
+        placeholder="ユーザ名をここに入力..."
+        required
+      />
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={handleUserSubmission}
+      >
+        送信
+      </button>
+      <h2 className="text-lg font-bold mt-6">ユーザ一覧</h2>
+      <ul className="list-disc pl-5">
+        {users.map((user) => (
+          <li key={user.id} className="mb-2">
+            {user.username}
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              onClick={handleUserSubmission}
+              className="ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded"
+              onClick={() => handleUserDelete(user.id)}
             >
-              送信
+              削除
             </button>
-            <h2 className="text-lg font-bold mt-6">ユーザ一覧</h2>
-            <ul className="list-disc pl-5">
-              {users.map((user) => (
-                <li key={user.id} className="mb-2">
-                  {user.username}
-                  <button
-                    className="ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded"
-                    onClick={() => handleUserDelete(user.id)}
-                  >
-                    削除
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+          </li>
+        ))}
+      </ul>
     </div>
+    </Layout>
   );
 }
