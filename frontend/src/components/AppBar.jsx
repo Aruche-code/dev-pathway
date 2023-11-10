@@ -1,8 +1,8 @@
 import React from "react";
 
-// AppBar コンポーネント: アプリケーションのヘッダーバーを表示する
+// AppBar 共通コンポーネント: アプリケーションのヘッダーバーを表示する
 // Props:
-// - setDrawerOpen: ドロワーの状態を設定する関数
+// - setDrawerOpen: ドロワーの状態を設定する関数 (未実装)
 const AppBar = () => {
   return (
     <header className="flex-shrink-0 bg-blue-500 text-white p-4">

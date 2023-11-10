@@ -1,10 +1,13 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import { SidebarData } from "./SidebarData";
 
-function Sidebar() {
+// Saidbar 共通コンポーネント: アプリケーションのSaidbarを表示する
+// Props:
+// - none:
+const Sidebar = () => {
   return (
-    <aside className="flex-shrink-0 w-44 bg-gray-800 text-white">
+    <aside className="flex-shrink-0 w-48 bg-gray-800 text-white">
       <nav className="p-4">
         <ul>
           {SidebarData.map((item, key) => (
@@ -25,6 +28,6 @@ function Sidebar() {
       </nav>
     </aside>
   );
-}
+};
 
 export default Sidebar;
