@@ -1,10 +1,9 @@
-// frontend/pages/index.js
-// トップレベルのルートページコンポーネント
+//トップレベルのプロフィールコンポーネント
 import AppBar from "../components/AppBar";
 import Sidebar from "../components/Sidebar";
 import React from "react";
 
-export default function index() {
+export default function profile() {
   return (
     <div className="flex flex-col h-screen">
       <AppBar />

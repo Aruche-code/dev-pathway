@@ -1,10 +1,10 @@
-// frontend/pages/index.js
-// トップレベルのルートページコンポーネント
+//トップレベルの予約ページコンポーネント
 import AppBar from "../components/AppBar";
 import Sidebar from "../components/Sidebar";
+// import BookingForm from "../features/booking";
 import React from "react";
 
-export default function index() {
+export default function booking() {
   return (
     <div className="flex flex-col h-screen">
       <AppBar />
