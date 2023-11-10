@@ -2,6 +2,7 @@ import AppBar from "../components/AppBar";
 import Sidebar from "../components/Sidebar";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+//開発動作確認用のトップレベルのページコンポーネント
 
 export default function User() {
   // ユーザー名のテキストを管理するためのステート
