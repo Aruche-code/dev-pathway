@@ -1,17 +1,16 @@
 //トップレベルの予約ページコンポーネント
-import AppBar from "../components/AppBar";
-import Sidebar from "../components/Sidebar";
+//import Days from "../features/booking/BookingForm";
 // import BookingForm from "../features/booking";
-import React from "react";
+import React, { useState } from 'react'
+import Layout from '../components/layouts';
 
 export default function booking() {
-  return (
-    <div className="flex flex-col h-screen">
-      <AppBar />
-      <div className="flex flex-1 overflow-hidden">
-        <Sidebar />
-        <div className="flex flex-col flex-1 p-4 overflow-auto"></div>
-      </div>
+    return (
+    <Layout>
+    <div className="px-2">
+        {/* day names */}
+        <h1 className="text-red-300">Tailwind学習していくよ！</h1>
     </div>
-  );
+    </Layout>
+    )
 }
