@@ -52,6 +52,7 @@ export default function profile() {
           <button className="flex items-center px-20 py-3 text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 mt-7 mb-4">確認する</button>
         </div>
       </main>
+
     </Layout>
   );
 }

@@ -22,6 +22,11 @@ export const SidebarData = [
     link: "/booking",
   },
   {
+    title: "ログイン",
+    icon: <EditCalendarIcon />,
+    link: "/login",
+  },
+  {
     title: "設定",
     icon: <SettingsIcon />,
     link: "/",
