@@ -1,7 +1,7 @@
 import Layout from '../components/layouts';
 import Head from 'next/head';
 
-export default function booking() {
+export default function password() {
   return (
     <Layout>
         <Head><title>現在の起動時のページ</title></Head>

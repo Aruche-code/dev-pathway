@@ -12,19 +12,39 @@ export const SidebarData = [
     link: "/",
   },
   {
-    title: "プロフィール作成",
+    title: "プロフィール編集",
     icon: <PersonAddIcon />,
     link: "/profile",
   },
   {
-    title: "予約",
+    title: "プロフィール画面",
+    icon: <PersonAddIcon />,
+    link: "/profile1",
+  },
+  {
+    title: "ホーム画面",
+    icon: <EditCalendarIcon />,
+    link: "/home",
+  },
+  {
+    title: "予約画面",
     icon: <EditCalendarIcon />,
     link: "/booking",
+  },
+  {
+    title: "新規登録",
+    icon: <EditCalendarIcon />,
+    link: "/signup",
   },
   {
     title: "ログイン",
     icon: <EditCalendarIcon />,
     link: "/login",
+  },
+  {
+    title: "パスワード再設定画面",
+    icon: <EditCalendarIcon />,
+    link: "/password",
   },
   {
     title: "設定",
