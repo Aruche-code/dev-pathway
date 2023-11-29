@@ -47,6 +47,11 @@ export const SidebarData = [
     link: "/password",
   },
   {
+    title: "学生カルテ",
+    icon: <EditCalendarIcon />,
+    link: "/record",
+  },
+  {
     title: "設定",
     icon: <SettingsIcon />,
     link: "/",
