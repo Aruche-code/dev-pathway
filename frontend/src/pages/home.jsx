@@ -3,48 +3,56 @@
 // import BookingForm from "../features/booking";
 import React, { useState } from 'react'
 import Layout from '../components/layouts';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 export default function home() {
     const [date, setDate] = useState(new Date());
 
     const daysInMonth = () => {
-      const year = date.getFullYear();
-      const month = date.getMonth();
-      const days = new Date(year, month + 1, 0).getDate();
-      return Array.from({ length: days }, (_, i) => i + 1);
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const days = new Date(year, month + 1, 0).getDate();
+        return Array.from({ length: days }, (_, i) => i + 1);
     };
-  
+    
+    //月を前に１つ戻す
     const prevMonth = () => {
-      setDate(new Date(date.getFullYear(), date.getMonth() - 1));
+        setDate(new Date(date.getFullYear(), date.getMonth() - 1));
     };
-  
+
+    //月を後に１つ進める
     const nextMonth = () => {
-      setDate(new Date(date.getFullYear(), date.getMonth() + 1));
+        setDate(new Date(date.getFullYear(), date.getMonth() + 1));
     };
 
     return (
     <Layout>
-    <div className="container mx-auto mt-0 w-4/5">
-      <div className="flex justify-between items-center mb-4">
-        <button onClick={prevMonth}>&lt;</button>
-        <h2 className="text-xl font-bold">
-          {date.getFullYear()}年{date.getMonth() + 1}月
-        </h2>
-        <button onClick={nextMonth}>&gt;</button>
-      </div>
-      <div className="grid grid-cols-7 gap-2">
-        {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-          <div key={day} className="text-center font-bold">{day}</div>
-        ))}
-        {Array.from({ length: date.getDay() }, (_, i) => (
-          <div key={`empty-${i}`} className="text-center text-gray-400 border-2 h-16">{''}</div>
-        ))}
-        {daysInMonth().map(day => (
-          <div key={day} className="text-center border-2 h-16">
-            {day}
-          </div>
-        ))}
-      </div>
+    <div className="flex h-full w-full">
+        <div className="ml-8 mt-0 w-9/12 border-r-2 pr-5">
+            <div className="text-3xl">{date.getFullYear()}年</div>
+            <div className="flex justify-start items-center mb-4">
+                <ArrowCircleLeftIcon onClick={prevMonth} className="mr-5" />
+                <h2 className="text-5xl font-bold">
+                {date.getMonth() + 1}月
+                </h2>
+                <ArrowCircleRightIcon onClick={nextMonth} className="mx-5" />
+            </div>
+            <div className="grid grid-cols-7 w-11/12 mx-auto">
+                {['日', '月', '火', '水', '木', '金', '土'].map(day => (
+                <div key={day} className="text-center font-bold">{day}</div>
+                ))}
+                {Array.from({ length: date.getDay() }, (_, i) => (
+                <div key={`empty-${i}`} className="text-center text-gray-400 border-2 h-20">{''}</div>
+                ))}
+                {daysInMonth().map(day => (
+                <div key={day} className="text-center border-2 h-20 hover:border-cyan-400">
+                    {day}
+                </div>
+                ))}
+            </div>
+        </div>
+        <div className="flex-auto h-full bg-red-100"></div>
     </div>
     </Layout>
     )
