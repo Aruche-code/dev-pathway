@@ -1,13 +1,14 @@
 //トップレベルのプロフィールコンポーネント
 import React from "react";
 import Layout from '../components/layouts';
+import Link from 'next/link';
 
 export default function profile() {
   return (
     <Layout>
       <main className="flex flex-col flex-1 p-4 overflow-auto items-center">
         <div className="mt-5 flex flex-col items-center w-6/12 py-2 border-4 border-blue-400 rounded-lg">
-          <h1 className="mt-10 text-2xl text-gray-400 font-banana">プロフィール</h1>
+          <h1 className="mt-10 text-2xl text-gray-600 font-banana">プロフィール</h1>
           <div className="flex items-center mt-5 w-8/12">
             <label className="text-gray-900 w-1/3">氏名（漢字）</label>
             <input className="p-2 border-2 rounded-lg w-2/3 px-4" />
@@ -55,8 +56,9 @@ export default function profile() {
             <label className=" text-gray-900 w-1/3">保有資格</label>
             <input className="p-2 border-2 rounded-lg w-2/3 px-4" />
           </div>
-
-          <button className="flex items-center px-20 py-3 text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 mt-7 mb-4">確認する</button>
+          <Link href="/profile1">
+            <button className="flex items-center px-20 py-3 text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 mt-7 mb-4">確認する</button>
+          </Link>
         </div>
       </main>
 
