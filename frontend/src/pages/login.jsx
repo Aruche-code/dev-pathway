@@ -20,9 +20,9 @@ function login() {
             <input className="h-hull w-full p-2 px-10 border-2 rounded-lg" placeholder="パスワード" />
           </div>
 
-          <div className="w-8/12 flex justify-end">
-            <button className="flex items-center px-10 py-2 text-center text-white bg-green-400 rounded-xl hover:bg-green-700 mt-4 mb-2">ログイン</button>
-          </div>
+          {/* <div className="w-8/12 flex justify-end"> */}
+          <button className="flex items-center px-16 py-2 text-center text-white bg-green-400 rounded-xl hover:bg-green-700 mt-7 mb-2">ログイン</button>
+          {/* </div> */}
           <div className="grid items-center mt-7 mb-3 text-center w-8/12">
             <p className="text-1xl text-blue-400 font-banana font-semibold">
               <a href="your-password-reset-url">パスワードをお忘れですか?</a>
