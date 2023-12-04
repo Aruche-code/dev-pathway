@@ -3,6 +3,7 @@ import Head from 'next/head';
 import React from "react";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import KeyIcon from '@mui/icons-material/Key';
+import Link from 'next/link';
 
 export default function signup() {
   return (
@@ -27,14 +28,20 @@ export default function signup() {
           {/* </div> */}
 
           {/* <div className="w-8/12 flex"> */}
-          <button className="flex items-center px-16 py-2 text-center text-white bg-green-400 rounded-xl hover:bg-green-700 mt-7 mb-4">次へ</button>
+          <Link href="/profile">
+            <button className="flex items-center px-16 py-2 text-center text-white bg-green-400 rounded-xl hover:bg-green-700 mt-7 mb-4">
+              次へ
+            </button>
+          </Link>
           {/* </div> */}
           <div className="grid items-center mt-4 mb-3 text-center w-8/12">
             <div className="mt-3 mb-2 flex-grow border-b border-gray-400" ></div>
             <p className="text-1xl text-black font-banana font-semibold">アカウントをお持ちの方はこちら</p>
           </div>
           <p className="mt-2 mb-10 text-1xl text-blue-400 font-banana font-semibold">
-            <a href="your-registration-url">ログイン</a>
+            <Link href="/login">
+              ログイン
+            </Link>
           </p>
         </div>
       </main>

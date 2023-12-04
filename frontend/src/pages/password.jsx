@@ -8,8 +8,8 @@ export default function password() {
   return (
     <Layout>
       <main className="flex flex-col flex-1 p-4 overflow-auto items-center">
-        <div className="mt-5 flex flex-col items-center w-5/12 py-2 border-4 border-blue-400 rounded-lg h-8/10">
-          <h1 className="mt-10 text-2xl text-gray-400 font-banana">パスワードの再設定</h1>
+        <div className="mt-5 flex flex-col items-center w-5/12 py-2 bg-gray-200 shadow-xl rounded-lg h-8/10">
+          <h1 className="mt-10 text-2xl text-gray-600 font-banana">パスワードの再設定</h1>
 
           <div className="w-8/12 mt-8 relative">
             <span className="absolute top-1/2 transform -translate-y-1/2 left-2"><MailOutlineIcon /></span>
